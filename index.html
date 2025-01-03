@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla de Posiciones</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="nav container">
+      <div id="title">Liga de Fútbol Barrial Jacobacci</div>
+      <div>
+        <button class="add-button" id="btn-login" onclick="iniciarSesion()">
+          Iniciar Sesión
+        </button>
+        <button class="add-button" id="btn-logout" onclick="cerrarSesion()">
+          Cerrar Sesión
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header">Tabla de Posiciones</div>
+      <div class="table">
+        <!-- Header -->
+        <div class="table-header">
+          <div class="table-cell">#</div>
+          <div class="table-cell"><img src="#" alt="s/e" /></div>
+          <div class="table-cell">Equipo</div>
+          <div class="table-cell">Pts</div>
+          <div class="table-cell">PJ</div>
+          <div class="table-cell">PG</div>
+          <div class="table-cell">PE</div>
+          <div class="table-cell">PP</div>
+          <div class="table-cell">GF</div>
+          <div class="table-cell">GC</div>
+          <div class="table-cell">DG</div>
+        </div>
+      </div>
+      <div class="container admin" id="editar">
+        <div class="header">Agregar Nuevo Equipo</div>
+        <div>
+          <p>Nombre del Equipo:</p>
+          <input id="id-equipo" type="text" placeholder="Nombre del Equipo" />
+        </div>
+        <div>
+          <p>Subir Escudo (.png o .jpg)</p>
+          <input
+            id="id-escudo"
+            type="file"
+            accept=".jpg, .png"
+            placeholder="Subir Escudo"
+          />
+        </div>
+        <button class="add-button" onclick="crearEquipo()">Agregar</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
